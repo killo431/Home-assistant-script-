@@ -1,5 +1,5 @@
 ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM $BUILD_FROM = "ghcr.io/home-assistant/amd64-base:latest --build-arg"
 
 ARG \
     BUILD_ARCH \
