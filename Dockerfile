@@ -1,6 +1,9 @@
 # Start from Home Assistant base image, using ARG for flexibility
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
-FROM ${BUILD_FROM}
+#ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
+#FROM ${BUILD_FROM}
+
+ARG BUILD_FROM
+FROM ${BUILD_FROM:-ubuntu:latest}
 
 # Define build arguments with defaults when appropriate
 ARG BUILD_ARCH
