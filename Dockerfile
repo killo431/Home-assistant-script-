@@ -3,8 +3,8 @@
 #FROM ${BUILD_FROM}
 FROM alpine:latest
 #RUN set -x \
-    && apk add --no-cache git docker docker-cli-buildx coreutils wget \
-    && ... # rest of your commands
+  #  && apk add --no-cache git docker docker-cli-buildx coreutils wget \
+  #  && ... # rest of your commands
 
 # Define build arguments with defaults when appropriate
 ARG BUILD_ARCH
