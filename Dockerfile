@@ -2,8 +2,8 @@
 #ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
 #FROM ${BUILD_FROM}
 
-ARG BUILD_FROM
-FROM ${BUILD_FROM:-ubuntu:latest}
+ARG BUILD_FROM=ubuntu:24.04
+FROM $BUILD_FROM
 
 # Define build arguments with defaults when appropriate
 ARG BUILD_ARCH
