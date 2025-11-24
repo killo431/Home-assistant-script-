@@ -1,13 +1,15 @@
 # Start from Home Assistant base image, using ARG for flexibility
 #ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
 #FROM ${BUILD_FROM}
+#- name: Build Docker image
+  #run: docker build --build-arg BUILD_ARCH=amd64 .
 FROM alpine:latest
 #RUN set -x \
   #  && apk add --no-cache git docker docker-cli-buildx coreutils wget \
   #  && ... # rest of your commands
 
 # Define build arguments with defaults when appropriate
-ARG BUILD_ARCH
+ARG BUILD_ARCH=amd64
 ARG YQ_VERSION=4.42.1
 ARG COSIGN_VERSION=2.1.1
 
